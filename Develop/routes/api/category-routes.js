@@ -6,6 +6,7 @@ const {
 
 // The `/api/categories` endpoint
 
+//the get route used to find all categories and respond with it
 router.get('/', async (req, res) => {
   try {
     const categories = await Category.findAll({
@@ -21,6 +22,7 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Products
 });
 
+//the get route to return a category with certrain params.id and respond with it
 router.get('/:id', async (req, res) => {
   try {
     const categories = await Category.findByPk(req.params.id, {
@@ -28,6 +30,7 @@ router.get('/:id', async (req, res) => {
         model: Product
       }],
     });
+    //if there is no category with that id, then res with error 404 and message
     if (!categories) {
       res.status(404).json({
         message: 'No product by this id'
@@ -39,10 +42,10 @@ router.get('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-  // find one category by its `id` value
-  // be sure to include its associated Products
+
 });
 
+//uses post route to create category 
 router.post('/', async (req, res) => {
   try {
     const category = await Category.create({
@@ -55,6 +58,7 @@ router.post('/', async (req, res) => {
   // create a new category
 });
 
+//uses put route to update the category with the specific params.id
 router.put('/:id', async (req, res) => {
   try {
     const category = await Category.update(req.body, {
@@ -62,6 +66,7 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
+    //if there is no category with ID to update, return status 404 and message
     if (!category[0]) {
       res.status(404).json({
         message: 'No category with this id.'
@@ -75,6 +80,7 @@ router.put('/:id', async (req, res) => {
   // update a category by its `id` value
 });
 
+//uses delete route to delete category with params.id
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
@@ -83,6 +89,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
+    //if there is no category with specified params.id, respond with 404 and message
     if (!categoryDelete) {
       res.status(404).json({
         message: 'No category with this id.'

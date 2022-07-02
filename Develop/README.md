@@ -1,43 +1,38 @@
+# E-commerce Data
 
-  # E-commerce Data
+This project allows user to manipulate an e-commerce database adding, updating and deleting items.
 
-  
- 
-  This project allows user to manipulate an e-commerce database adding, updating and deleting items.
+## Table of contents
 
-  ## Table of contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Test](#test)
-  - [Credits](#credits)
-  - [License](#license)
-  - [Contribute](#contribute)
-  - [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Test](#test)
+- [Credits](#credits)
+- [License](#license)
+- [Contribute](#contribute)
+- [Questions](#questions)
 
+## Installation
 
-  ## Installation
+Users can install this data by opening up terminal and inputing "npm i". Then create the schema from the MySQL shell and seeding data into it.
 
-  Users can install this data by opening up terminal and inputing "npm i".  Then create the schema from the MySQL shell and seeding data into it.  
+## Usage
 
-  ## Usage
+Users can initiate the application server by inputting "npm run start" then utilize insominia to add, delete, or update information. Please watch this <a href="https://youtu.be/JsjS-a9xtvA">walkthrough video</a> for more information.
 
-  Users can initiate the application server by inputting "npm run start" then utilize insominia to add, delete, or update information.
+## Test
 
-  ## Test
+There are no tests.
 
-  If you would like to run some tests, please input the following command:
-  There are no tests.
+## Credits
 
-  ## Credits
+I would like to thank My friends, family, and staff at UCSD coding bootcamp for their support during the development of this application.
 
-  I would like to thank My friends, family, and staff at UCSD coding bootcamp for their support during the development of this application.
+## License
 
-  ## License
+This project is licensed under None.
 
-  This project is licensed under None.
+## Questions
 
-  ## Questions
-
-  If you have any questions, please direct them towards my email at jimmyqv.tran@gmail.com.  
-  You can find more of my work at github.com/Yippeejimmee.
-
+If you have any questions, please direct them towards my email at jimmyqv.tran@gmail.com.  
+ You can find more of my work at github.com/Yippeejimmee.

@@ -75,7 +75,6 @@ router.put('/:id', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-  // update a tag's name by its `id` value
 });
 
 //uses delete route to delete tags with specific req.params.id 
